@@ -4,7 +4,7 @@
 'use strict';
 cBoard.service('chartService', function($q, dataService, chartPieService, chartLineService, chartFunnelService,
   chartSankeyService, chartTableService, chartKpiService, chartRadarService,
-  chartMapService, chartScatterService, chartGaugeService, chartWordCloudService,
+  chartMapService, chartScatterMapService, chartScatterService, chartGaugeService, chartWordCloudService,
   chartTreeMapService, chartAreaMapService, chartHeatMapCalendarService, chartHeatMapTableService,
   chartLiquidFillService, chartContrastService, chartChinaMapService, chartChinaMapBmapService,
   chartRelationService, chartWorldMapService) {
@@ -189,6 +189,9 @@ cBoard.service('chartService', function($q, dataService, chartPieService, chartL
         break;
       case 'worldMap':
         chart = chartWorldMapService;
+        break;
+      case 'scatterMap': // 通过类型选择对应图表的service
+        chart = chartScatterMapService;
         break;
     }
     return chart;
