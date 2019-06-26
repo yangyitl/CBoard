@@ -135,6 +135,13 @@ cBoard.controller('widgetCtrl', function ($scope, $state, $stateParams, $http, $
                 row: translate('CONFIG.WIDGET.TIPS_DIM_NUM_1_MORE'),
                 column: translate('CONFIG.WIDGET.TIPS_DIM_NUM_0_MORE'),
                 measure: translate('CONFIG.WIDGET.TIPS_DIM_NUM_1')
+            },
+            {
+                // 定义图表的类型为：scatterMap
+                name: translate('CONFIG.WIDGET.SCATTER_MAP'), value: 'scatterMap', class: 'cScatterMap',
+                row: translate('CONFIG.WIDGET.TIPS_DIM_NUM_1_MORE'),
+                column: translate('CONFIG.WIDGET.TIPS_DIM_NUM_0_MORE'),
+                measure: translate('CONFIG.WIDGET.TIPS_DIM_NUM_1_MORE')
             }
         ];
 
