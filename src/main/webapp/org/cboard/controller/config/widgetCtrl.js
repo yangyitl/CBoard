@@ -151,7 +151,7 @@ cBoard.controller('widgetCtrl', function ($scope, $state, $stateParams, $http, $
             "scatter": true, "gauge": true, "wordCloud": true, "treeMap": true,
             "heatMapCalendar": true, "heatMapTable": true, "liquidFill": true,
             "areaMap": true, "contrast": true,"chinaMap":true,"chinaMapBmap":true,
-            "relation":true, "worldMap": true
+            "relation":true, "worldMap": true, "scatterMap":true,
         };
 
         $scope.value_series_types = [
