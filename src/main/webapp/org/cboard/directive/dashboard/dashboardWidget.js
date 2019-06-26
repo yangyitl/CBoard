@@ -38,6 +38,18 @@ cBoard.directive('dashboardWidget', function ($compile, $templateCache, dataServ
         var ndWrapper = $(element).find('.box-body');
         scope.widget.render(ndWrapper, null, scope);
     };
+    
+    var renderScatterMap= function (scope, element, attrs) {
+       // 加载 webapp\starter.html 中的渲染html模板
+        var template = $templateCache.get("chartContent"); 
+       // 渲染模板的高度
+        scope.myheight = scope.row.height ? (scope.row.height - 44) : 300;
+        var link = $compile(template);
+        element.append(link(scope));
+        var ndWrapper = $(element).find('.box-body');
+        // 调用 webapp\org\cboard\service\chart\chartService.js 的render方法
+        scope.widget.render(ndWrapper, null, scope);
+    };
 
     return {
         restrict: 'E',
